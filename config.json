@@ -1,0 +1,8 @@
+{
+    "open_weather": {
+        "api_key": "e325c95def146ec0f6463c1ba75ad893"
+    },
+    "ipstack": {
+        "api_key": "f5d74d0d785b1cd512fac1ab9e114098"
+    }
+}
