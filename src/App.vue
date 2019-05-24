@@ -20,6 +20,8 @@
 
 <script>
 import axios from 'axios';
+import config from '../config.json';
+
 export default {
   name: 'app',
   data () {
@@ -34,7 +36,7 @@ export default {
     onSubmit() {
       console.log(Number(this.query))
       if ( !isNaN(this.query) ) {
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.query}&APPID=e325c95def146ec0f6463c1ba75ad893&units=imperial`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.query}&APPID=${config.api-key}&units=imperial`)
           .then((result) => {
             console.log(result);
             this.data = result.data;
@@ -42,7 +44,7 @@ export default {
           });
       } else {
         console.log('test');
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.query}&APPID=e325c95def146ec0f6463c1ba75ad893&units=imperial`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.query}&APPID=${config.api-key}&units=imperial`)
           .then((result) => {
             console.log(result);
             this.data = result.data;
