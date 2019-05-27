@@ -1,6 +1,7 @@
 # weather-app
 
 > Weather App for CodingTemple weekend project
+> Check out live version at https://llang8.github.io/weather-interface/
 
 ## Build Setup
 
